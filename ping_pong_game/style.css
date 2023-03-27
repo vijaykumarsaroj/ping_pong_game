@@ -1,0 +1,87 @@
+:root{
+    --rod1Primary:#07b178;
+    --rod1Secondary:#046d4d;
+    --rod2Primary:#d40c5f;
+    --rod2Secondary:#910a3e;
+    --ballPrimary : rgb(197, 197, 197);
+    --ballSecondary : rgb(145, 144, 140); 
+    --body: rgb(24, 24, 24);
+}
+body {
+    background-color: var(--body);
+    overflow: hidden;
+}
+
+/* styles for the ball */
+.ball {
+    height: 30px;
+    width: 30px;
+    border-radius:50% ;
+    position: fixed;
+    top: 32px;
+    left: 50vw;
+    background: linear-gradient(var(--ballSecondary),var(--ballPrimary));
+    box-shadow:0 1px 12px var(--ballPrimary);
+    z-index: 10;
+}
+
+/* styles for the rod */
+.rod1, .rod2 {
+    width: 200px;
+    height: 30px;
+    position: fixed;
+    left: 43vw;
+    border-radius: 5px;
+    text-align: center;
+    color: var(--body);
+    font-weight: bold;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.rod1 {
+    background: linear-gradient(var(--rod1Secondary),var(--rod1Primary));
+    box-shadow:0 1px 12px var(--rod1Primary);
+    top: 1px;    
+}
+.rod2 {
+    background: linear-gradient(var(--rod2Primary),var(--rod2Secondary));
+    box-shadow:0 -1px 12px var(--rod2Primary);
+    bottom: 2px;
+}
+
+/* styles for the centre */
+.partition{
+    position:absolute;
+    top:50vh;
+    opacity:.5;
+    height: 2px;
+    width: 100%;
+    background-color: whitesmoke;
+}
+/* styles for Score board */
+.rod1Score{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    position:absolute;
+    left:50%;
+    top:20vh;
+    transform:translateX(-50%); 
+    opacity:.5;
+    color:var(--rod1Primary);
+    font-size:5rem;
+}
+.rod2Score{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    position:absolute;
+    position:absolute;
+    left:50%;
+    top:45vh;
+    transform:translateX(-50%);
+    opacity:.5;
+    color:var(--rod2Primary);
+    font-size:5rem;
+}
